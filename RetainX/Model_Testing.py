@@ -3,22 +3,22 @@ import joblib
 import pandas as pd 
 
 # load a model 
-LG=joblib.load(r"N:\RetainX\Logistic Regression.pkl")
-DTC=joblib.load(r"N:\RetainX\Decision Tree Classifier.pkl")
-RFC=joblib.load(r"N:\RetainX\Random Forset Classifier.pkl")
-GBC=joblib.load(r"N:\RetainX\Gradient Boosting Classifier.pkl")
-SVC=joblib.load(r"N:\RetainX\Support Vector Classifier.pkl") 
-KNC=joblib.load(r"N:\RetainX\K Neighbors Classifier.pkl")
+LG=joblib.load("RetainX/Logistic Regression.pkl")
+DTC=joblib.load("RetainX/Decision Tree Classifier.pkl")
+RFC=joblib.load("RetainX/Random Forset Classifier.pkl")
+GBC=joblib.load("RetainX/Gradient Boosting Classifier.pkl")
+SVC=joblib.load("RetainX/Support Vector Classifier.pkl") 
+KNC=joblib.load("RetainX/K Neighbors Classifier.pkl")
 # Create radio button choose the model
-st.sidebar.image(r"N:/RetainX/RetainX_image.png")
+st.sidebar.image("RetainX/RetainX_image.png")
 model_option=st.sidebar.radio("Choase the Model",["Metrics","Logistic Regression","Decision Tree Classifier",
                                                   "Random Forest Classifier","Gradient Boosting Classifier",
                                                   "Support Vector Classifier","K Neighbors Classifier"])
 
 if model_option=="Metrics":
-    st.table(pd.read_csv(r"N:\RetainX\Accuracy.csv"))
-    st.table(pd.read_csv(r"N:\RetainX\classification_report.csv"))
-    st.table(pd.read_csv(r"N:\RetainX\confusion_matrix.csv"))
+    st.table(pd.read_csv("RetainX/Accuracy.csv"))
+    st.table(pd.read_csv("RetainX/classification_report.csv"))
+    st.table(pd.read_csv("RetainX/confusion_matrix.csv"))
 # input the user    
 age = st.number_input("العمر", min_value=1, max_value=120, step=1)
 if age > 50:
@@ -117,3 +117,4 @@ elif model_option == "K Neighbors Classifier":
             st.success("المستخدم رح يبقى في الخدمه")
         else :
             st.error("المستخدم رح يترك في الخدمه")
+
