@@ -6,13 +6,13 @@ import pandas as pd
 LG=joblib.load("RetainX/Logistic Regression.pkl")
 DTC=joblib.load("RetainX/Decision Tree Classifier.pkl")
 RFC=joblib.load("RetainX/Random Forset Classifier.pkl")
-GBC=joblib.load("RetainX/Gradient Boosting Classifier.pkl")
+BNB=joblib.load(r"N:\RetainX\Naive Bayes BernoulliNB.pkl")
 SVC=joblib.load("RetainX/Support Vector Classifier.pkl") 
 KNC=joblib.load("RetainX/K Neighbors Classifier.pkl")
 # Create radio button choose the model
 st.sidebar.image("RetainX/RetainX_image.png")
 model_option=st.sidebar.radio("Choase the Model",["Metrics","Logistic Regression","Decision Tree Classifier",
-                                                  "Random Forest Classifier","Gradient Boosting Classifier",
+                                                  "Random Forest Classifier","Naive Bayes BernoulliNB",
                                                   "Support Vector Classifier","K Neighbors Classifier"])
 
 if model_option=="Metrics":
@@ -94,10 +94,10 @@ elif model_option == "Random Forest Classifier":
         else :
             st.error("المستخدم رح يترك في الخدمه")
 
-elif model_option == "Gradient Boosting Classifier":
-    if st.button("Predict Gradient Boosting Classifier"):
-        Gradient=GBC.predict(input_user)
-        if Gradient[0]==0:
+elif model_option == "Naive Bayes BernoulliNB":
+    if st.button("Predict Naive Bayes BernoulliNB"):
+        BernoulliNB=BNB.predict(input_user)
+        if BernoulliNB[0]==0:
             st.success("المستخدم رح يبقى في الخدمه")
         else :
             st.error("المستخدم  رح يترك في الخدمه")
@@ -117,4 +117,5 @@ elif model_option == "K Neighbors Classifier":
             st.success("المستخدم رح يبقى في الخدمه")
         else :
             st.error("المستخدم رح يترك في الخدمه")
+
 
