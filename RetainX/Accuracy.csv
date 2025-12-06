@@ -1,7 +1,0 @@
-Model,Accuracy
-Logistic Regression,77.08
-Decision Tree Classifier,75.16
-Random Forset Classifier ,76.72
-Gradient Boosting Classifier,76.79
-Support Vector Classifier,70.26
-K Neighbors Classifier,70.19
