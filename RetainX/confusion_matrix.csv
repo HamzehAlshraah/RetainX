@@ -1,0 +1,13 @@
+Model,Confusion Matrix
+Logistic Regression,"[[832 204]
+ [119 254]]"
+Decision Tree Classifier,"[[798 238]
+ [112 261]]"
+Random Forset Classifier ,"[[846 190]
+ [132 241]]"
+Naive Bayes BernoulliNB,"[[679 357]
+ [146 227]]"
+Support Vector Classifier,"[[700 336]
+ [ 83 290]]"
+K Neighbors Classifier,"[[728 308]
+ [112 261]]"

@@ -1,0 +1,7 @@
+Model,Accuracy
+Logistic Regression,77.08
+Decision Tree Classifier,75.16
+Random Forset Classifier ,77.15
+Naive Bayes BernoulliNB,64.3
+Support Vector Classifier,70.26
+K Neighbors Classifier,70.19
