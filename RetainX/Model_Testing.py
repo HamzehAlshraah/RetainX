@@ -6,7 +6,7 @@ import pandas as pd
 LG=joblib.load("RetainX/Logistic Regression.pkl")
 DTC=joblib.load("RetainX/Decision Tree Classifier.pkl")
 RFC=joblib.load("RetainX/Random Forset Classifier.pkl")
-BNB=joblib.load(r"N:\RetainX\Naive Bayes BernoulliNB.pkl")
+BNB=joblib.load("RetainX/Naive Bayes BernoulliNB.pkl")
 SVC=joblib.load("RetainX/Support Vector Classifier.pkl") 
 KNC=joblib.load("RetainX/K Neighbors Classifier.pkl")
 # Create radio button choose the model
@@ -117,5 +117,6 @@ elif model_option == "K Neighbors Classifier":
             st.success("المستخدم رح يبقى في الخدمه")
         else :
             st.error("المستخدم رح يترك في الخدمه")
+
 
 
